@@ -35,7 +35,7 @@ html, body {
 }
 
 /* Each background gets its own animation offset */
-.background-image-one   { background-image: url('../images/bg_04.jpg'); animation-delay: 0s, 0s; }
+.background-image-one   { background-image: url('../images/bg_4.jpg'); animation-delay: 0s, 0s; }
 .background-image-two   { background-image: url('../images/bg_3.jpg');  animation-delay: 5s, 0s; }
 .background-image-three { background-image: url('../images/bg_2.jpg');  animation-delay: 10s, 0s; }
 .background-image-four  { background-image: url('../images/bg_1.jpg');  animation-delay: 15s, 0s; }
@@ -81,7 +81,7 @@ html, body {
 h1 {
   font-size: 66px;
   line-height: 1;
-  color: #fc2c37;
+  color: #2A51FC;
   font-weight: 600;
   margin: 0 0 20px 0;
   opacity: 0;
@@ -112,7 +112,7 @@ p {
 
 a { 
   text-decoration: none;
-  color: #fc2c37;
+  color: #2A51FC;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
@@ -134,10 +134,10 @@ a:hover {
   color: #4a494a;
   transition: color 0.3s ease;
 }
-.si i:hover { color: #fc2c37; }
+.si i:hover { color: #0B29AB; }
 
 .btn-primary {
-  background-color: #fc2c37;
+  background-color: #2A51FC;
   color: #fff;
   padding: 14px;
   font-size: 16px;
@@ -154,7 +154,7 @@ a:hover {
 }
 
 .btn-primary:hover { 
-  background-color: #af2f33;
+  background-color: #0B29AB;
   transform: translateY(-2px);
 }
 
