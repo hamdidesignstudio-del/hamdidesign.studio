@@ -117,7 +117,7 @@ a {
 }
 
 a:hover {
-  color: #af2f33;
+  color: ##0B29AB;
   text-decoration: underline;
 }
 
@@ -134,7 +134,7 @@ a:hover {
   color: #4a494a;
   transition: color 0.3s ease;
 }
-.si i:hover { color: #0B29AB; }
+.si i:hover { color: #2A51FC; }
 
 .btn-primary {
   background-color: #2A51FC;
@@ -157,6 +157,8 @@ a:hover {
   background-color: #0B29AB;
   transform: translateY(-2px);
 }
+
+
 
 /* Generic fadeIn keyframe */
 @keyframes fadeIn {
