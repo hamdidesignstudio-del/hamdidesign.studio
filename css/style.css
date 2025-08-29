@@ -1,0 +1,207 @@
+/* ===========================================
+   Global Reset
+=========================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fraunces", serif;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  text-align: left;   /* Justify all text to the left */
+}
+
+/* ===========================================
+   Background Crossfade + Pan
+=========================================== */
+.background-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -999;
+  background-color: #000;
+}
+
+.background-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: right center;
+  opacity: 0;
+  animation: crossfade 30s infinite, pan 60s linear infinite;
+}
+
+/* Each background gets its own animation offset */
+.background-image-one   { background-image: url('../images/bg_4.jpg'); animation-delay: 0s, 0s; }
+.background-image-two   { background-image: url('../images/bg_3.jpg');  animation-delay: 5s, 0s; }
+.background-image-three { background-image: url('../images/bg_2.jpg');  animation-delay: 10s, 0s; }
+.background-image-four  { background-image: url('../images/bg_1.jpg');  animation-delay: 15s, 0s; }
+.background-image-five  { background-image: url('../images/bg_5.jpg');  animation-delay: 20s, 0s; }
+.background-image-six   { background-image: url('../images/bg_7.jpg');  animation-delay: 25s, 0s; }
+
+@keyframes crossfade {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }   /* fade in */
+  20%  { opacity: 1; }   /* hold */
+  25%  { opacity: 0; }   /* fade out */
+  100% { opacity: 0; }
+}
+
+@keyframes pan {
+  0%   { background-position: right center; }
+  50%  { background-position: left center; }
+  100% { background-position: right center; }
+}
+
+/* ===========================================
+   Desktop Leftside Panel
+=========================================== */
+.leftside {
+  width: 40%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 10px 0px 25px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Sequential fade-ins inside container (0.6s duration, 0.2s stagger) */
+h1 {
+  font-size: 66px;
+  line-height: 1;
+  color: #2A51FC;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.1s;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #4a494a;
+  margin: 0 0 20px 0;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.3s;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.5s;
+}
+
+a { 
+  text-decoration: none;
+  color: #2A51FC;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #af2f33;
+  text-decoration: underline;
+}
+
+.si {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.7s;
+}
+.si i {
+  margin: 0 12px;
+  color: #4a494a;
+  transition: color 0.3s ease;
+}
+.si i:hover { color: #0B29AB; }
+
+.btn-primary {
+  background-color: #2A51FC;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 140px;
+  max-width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 0.9s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover { 
+  background-color: #0B29AB;
+  transform: translateY(-2px);
+}
+
+/* Generic fadeIn keyframe */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================================
+   Mobile Styles
+=========================================== */
+@media (max-width: 768px) {
+
+  .background-container {
+    position: absolute;
+    height: 60vh;
+  }
+
+  .leftside {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    background: #fff;
+    box-shadow: 0 -5px 20px rgba(0,0,0,.2);
+    margin-top: 60vh;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 10% auto;
+    text-align: left;
+  }
+
+  h1 { font-size: 64px; animation-delay: 0.1s; }
+  h2 { font-size: 24px; animation-delay: 0.3s; }
+  p  { font-size: 15px; animation-delay: 0.5s; }
+  .si { animation-delay: 0.7s; }
+  .si i { font-size: 20px; margin: 0 10px; }
+  .btn-primary { 
+    animation-delay: 0.9s;
+    width: auto;
+    min-width: 140px;
+    max-width: 80%;
+  }
+}
