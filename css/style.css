@@ -92,7 +92,7 @@ h1 {
 h2 {
   font-size: 19px;
   font-weight: 500;
-  color: #4a494a;
+  color: #323946;
   margin: 0 0 20px 0;
   opacity: 0;
   animation: fadeIn 0.6s forwards;
@@ -102,7 +102,7 @@ h2 {
 p {
   font-size: 16px;
   line-height: 1.5;
-  color: #666;
+  color: #616b7c;
   font-weight: 300;
   margin-bottom: 20px;
   opacity: 0;
@@ -131,7 +131,7 @@ a:hover {
 }
 .si i {
   margin: 0 12px;
-  color: #4a494a;
+  color: #323946;
   transition: color 0.3s ease;
 }
 .si i:hover { color: #2A51FC; }
